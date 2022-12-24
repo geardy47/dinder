@@ -45,7 +45,8 @@ class StackedRouter extends _i1.RouterBase {
     _i3.DetailView: (data) {
       final args = data.getArgs<DetailViewArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
-        builder: (context) => _i3.DetailView(key: args.key, name: args.name),
+        builder: (context) => _i3.DetailView(
+            key: args.key, name: args.name, imageList: args.imageList),
         settings: data,
       );
     },
@@ -61,11 +62,14 @@ class DetailViewArguments {
   const DetailViewArguments({
     this.key,
     required this.name,
+    required this.imageList,
   });
 
   final _i4.Key? key;
 
   final String name;
+
+  final List<String> imageList;
 }
 
 extension NavigatorStateExtension on _i5.NavigationService {
@@ -86,6 +90,7 @@ extension NavigatorStateExtension on _i5.NavigationService {
   Future<dynamic> navigateToDetailView({
     _i4.Key? key,
     required String name,
+    required List<String> imageList,
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
@@ -93,7 +98,8 @@ extension NavigatorStateExtension on _i5.NavigationService {
         transition,
   }) async {
     return navigateTo<dynamic>(Routes.detailView,
-        arguments: DetailViewArguments(key: key, name: name),
+        arguments:
+            DetailViewArguments(key: key, name: name, imageList: imageList),
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

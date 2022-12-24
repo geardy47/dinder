@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../../application/app/constants/custom_color.dart';
 import 'home_viewmodel.dart';
 import 'widgets/custom_sliver_appbar.dart';
 import 'widgets/custom_sliver_list.dart';
@@ -15,15 +16,38 @@ class HomeView extends ViewModelBuilderWidget<HomeViewModel> {
 
   @override
   Widget builder(BuildContext context, HomeViewModel viewModel, Widget? child) {
-    return const Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          CustomSliverAppBar(),
-          CustomSliverRoundedCorner(),
-          CustomTitle(),
-          CustomSliverList(),
-        ],
-      ),
+    return Stack(
+      children: [
+        const Scaffold(
+          body: CustomScrollView(
+            slivers: [
+              CustomSliverAppBar(),
+              CustomSliverRoundedCorner(),
+              CustomTitle(),
+              CustomSliverList(),
+            ],
+          ),
+        ),
+        Visibility(
+          visible: viewModel.isBusy && viewModel.isLoadingImage,
+          child: Stack(
+            children: [
+              Opacity(
+                opacity: 0.6,
+                child: ModalBarrier(
+                  dismissible: false,
+                  color: CustomColor.accentColor,
+                ),
+              ),
+              Center(
+                child: CircularProgressIndicator(
+                  color: CustomColor.primaryColor,
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

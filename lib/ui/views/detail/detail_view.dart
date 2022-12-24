@@ -1,3 +1,4 @@
+import 'package:dinder/application/helpers/string_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -10,13 +11,15 @@ class DetailView extends ViewModelBuilderWidget<DetailViewModel> {
   const DetailView({
     super.key,
     required this.name,
+    required this.imageList,
   });
 
   final String name;
+  final List<String> imageList;
 
   @override
   DetailViewModel viewModelBuilder(BuildContext context) =>
-      DetailViewModel(name: name);
+      DetailViewModel(name: name, imageList: imageList);
 
   @override
   Widget builder(
@@ -28,7 +31,7 @@ class DetailView extends ViewModelBuilderWidget<DetailViewModel> {
           onPressed: viewModel.navBack,
         ),
         title: Text(
-          viewModel.name,
+          viewModel.name.toCapitalized(),
           style: tsTitle.copyWith(color: CustomColor.textColor),
         ),
       ),

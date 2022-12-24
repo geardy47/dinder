@@ -17,6 +17,7 @@ We are using [Stacked Architecture](https://www.filledstacks.com/post/flutter-an
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | stacked            | [![pub package](https://img.shields.io/pub/v/stacked.svg)](https://pub.dev/packages/stacked)                       |
 | stacked_services   | [![pub package](https://img.shields.io/pub/v/stacked_services.svg)](https://pub.dev/packages/stacked_services)     |
+| stacked_hooks      | [![pub package](https://img.shields.io/pub/v/stacked_hooks.svg)](https://pub.dev/packages/stacked_hooks)           |
 | freezed_annotation | [![pub package](https://img.shields.io/pub/v/freezed_annotation.svg)](https://pub.dev/packages/freezed_annotation) |
 | json_annotation    | [![pub package](https://img.shields.io/pub/v/json_annotation.svg)](https://pub.dev/packages/json_annotation)       |
 | cupertino_icons    | [![pub package](https://img.shields.io/pub/v/cupertino_icons.svg)](https://pub.dev/packages/cupertino_icons)       |

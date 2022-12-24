@@ -7,6 +7,10 @@ A dating app for dogs only, which can help you to choose what breed they want to
 [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://www.android.com)
 [![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)](https://www.apple.com/id/ios/ios-16/)
 
+## Demo
+
+![image](documentation/app.gif)
+
 ## Architecture
 
 We are using [Stacked Architecture](https://www.filledstacks.com/post/flutter-and-provider-architecture-using-stacked) which was an implementation of MVVM.
@@ -52,12 +56,4 @@ $ flutter build apk --release
 
 ``` dart
 $ flutter build ipa --release
-```
-
-## Run Tests in a Terminal
-
-You can use a terminal to run the tests by executing the following command from the root of the project:
-
-``` dart
-$ flutter test
 ```

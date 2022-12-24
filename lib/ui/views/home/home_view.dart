@@ -20,6 +20,7 @@ class HomeView extends ViewModelBuilderWidget<HomeViewModel> {
       children: [
         const Scaffold(
           body: CustomScrollView(
+            key: Key('sliverList'),
             slivers: [
               CustomSliverAppBar(),
               CustomSliverRoundedCorner(),

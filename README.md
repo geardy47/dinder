@@ -57,3 +57,11 @@ $ flutter build apk --release
 ``` dart
 $ flutter build ipa --release
 ```
+
+## Run Tests in a Terminal
+
+You can use a terminal to run the tests by executing the following command from the root of the project:
+
+``` dart
+$ flutter test
+```

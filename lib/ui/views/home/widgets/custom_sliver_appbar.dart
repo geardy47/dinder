@@ -12,6 +12,7 @@ class CustomSliverAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      key: const Key('homeAppBar'),
       expandedHeight: 320.h,
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(

@@ -9,7 +9,7 @@ A dating app for dogs only, which can help you to choose what breed they want to
 
 ## Demo
 
-![image](documentation/app.gif)
+<img src="documentation/app.gif" alt="demo" width="360"/>
 
 ## Architecture
 

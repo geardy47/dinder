@@ -1,10 +1,10 @@
-import 'package:dinder/ui/views/home/home_viewmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:stacked_hooks/stacked_hooks.dart';
 
 import '../../../../application/app/constants/custom_color.dart';
 import '../../../../application/app/theme/text_styles.dart';
+import '../home_viewmodel.dart';
 
 class CustomSliverList extends HookViewModelWidget<HomeViewModel> {
   const CustomSliverList({
@@ -17,7 +17,7 @@ class CustomSliverList extends HookViewModelWidget<HomeViewModel> {
       delegate: SliverChildBuilderDelegate(
         (_, int index) {
           return GestureDetector(
-            onTap: () {},
+            onTap: viewModel.navToDetail,
             child: Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 16.w,

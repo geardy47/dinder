@@ -1,7 +1,13 @@
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
+
+import '../../../application/app/app.locator.dart';
+import '../../../application/app/app.router.dart';
 
 class HomeViewModel extends BaseViewModel {
-  String get home => _home;
+  final _navigationService = locator<NavigationService>();
 
-  final String _home = 'This is Home View';
+  void navToDetail() {
+    _navigationService.navigateToDetailView(name: 'Chihuaha');
+  }
 }
